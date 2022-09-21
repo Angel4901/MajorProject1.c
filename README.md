@@ -1,1 +1,3 @@
-# MajorProject1.c
+# Rand Alkassi
+# Daniel Padierna
+# Abdal Alkaissi
