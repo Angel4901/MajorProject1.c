@@ -23,11 +23,11 @@ void main()
 
         if (num == 1)
         {
-            //power();
+            power();
         }
         else if (num == 2)
         {
-            //reverse();
+            reverse();
         }
         else if (num == 3)
         {
@@ -35,7 +35,7 @@ void main()
         }
         else if (num == 4)
         {
-            //palindrome();
+            palindrome();
         }
         else if (num == 5)
         {
@@ -51,11 +51,13 @@ void main()
 void power()
 {
     //insert all of your code here
+    main();
 }
 
 void reverse()
 {
     //insert all of your code here
+    main();
 }
 
 void replace()
@@ -110,6 +112,38 @@ void replace()
 }
 
 void palindrome()
-{
-    //insert all of your code here
+{   
+    #define SIZE 32
+    unsigned int n;
+        //input a number 
+        printf("Enter a positive integer less than 2 billion: ");
+        scanf("%d", &n);
+
+        //fill array with zeros
+        int a[SIZE] = { 0 };
+
+        int i = SIZE - 1;
+        while (n != 0) {
+            a[i--] = n & 1;
+            //right shift 
+            n = n >> 1;
+        }
+        printf("Binary representation : ");
+
+        for (int x = 0;x < SIZE;x++)
+            printf("%d", a[x]);
+        printf("\n");
+
+        for (int x = 0, n = SIZE - 1;x < n;x++, n--) {
+            //any mismatch occurs then it is not pallindrome
+            if (a[x] != a[n]) {
+
+                printf("is not a palindrome\n");
+                main();
+            }
+        }
+        //else its a palindrome
+        printf("it is a palindrome\n");
+
+        main();
 }
