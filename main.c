@@ -96,8 +96,42 @@ void power()
 }
 
 void reverse()
+{  
+// Function to reverse bits of num
+unsigned int reverseBits(unsigned int x)
 {
-    //insert all of your code here
+    //Declare size
+    unsigned int numOfBits = sizeof(x) * 8;
+    
+    //Initialize revereNum and i
+    unsigned int reverseNum = 0;
+    int i;
+    
+    //Reverse num using bitwise
+    for (i = 0; i < numOfBits; i++) {
+        if ((x & (1 << i)))
+            reverseNum |= 1 << ((numOfBits - 1) - i);
+    }
+    //Return operation as reverseNum
+    return reverseNum;
+}
+
+int main()
+{
+    unsigned int num;
+    //Ask for and take input a decimal
+    printf("Enter a positive integer less than 2 billion: ");
+    scanf("%u", &num);
+    
+  //Test to make sure its greater than 0 and less then 2,000,000,000
+    while(num < 0 || num > 2000000000){
+      printf("Enter a positive integer less than 2 billion: ");
+    scanf("%u", &num);
+  }  
+    //Print output
+    printf("%u with bits reversed is %u",num, reverseBits(num));
+    getchar();
+}
     main();
 }
 
