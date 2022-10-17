@@ -188,11 +188,15 @@ void replace()
 
 void palindrome()
 {
-#define SIZE 32
+    #define SIZE 32
     unsigned int n;
-    //input a number 
-    printf("Enter a positive integer less than 2 billion: ");
-    scanf("%d", &n);
+    while (1)
+    {
+        printf("Enter a positive integer less than 2 billion: ");
+        scanf("%d", &n);
+        if (n > 0 && n < 2000000000)
+            break;
+    }
 
     //fill array with zeros
     int a[SIZE] = { 0 };
@@ -219,6 +223,5 @@ void palindrome()
     }
     //else its a palindrome
     printf("it is a palindrome\n");
-
     main();
 }
