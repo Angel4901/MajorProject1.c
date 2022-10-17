@@ -158,7 +158,7 @@ void replace(int _num)
 
 void palindrome(int _num)
 {
-    #define SIZE 32
+#define SIZE 32
 
     //fill array with zeros
     int a[SIZE] = { 0 };
@@ -172,12 +172,12 @@ void palindrome(int _num)
     printf("Binary representation : ");
 
     for (int x = 0;x < SIZE;x++)
-        printf("%d", a[x]);
+        printf("%d", a[_num]);
     printf("\n");
 
-    for (int x = 0, n = SIZE - 1;x < n;x++, n--) {
+    for (int x = 0, _num = SIZE - 1;x < _num;x++, _num--) {
         //any mismatch occurs then it is not pallindrome
-        if (a[x] != a[n]) {
+        if (a[x] != a[_num]) {
 
             printf("is not a palindrome\n");
             main();
