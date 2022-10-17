@@ -160,13 +160,10 @@ void palindrome(int _num)
 {
     unsigned int n = _num;
 
-        //fill array with zeros
-        int a[32] = { 0 };
-
+    int a[32] = { 0 };
         int i = 32 - 1;
         while (n != 0) {
             a[i--] = n & 1;
-            //right shift 
             n = n >> 1;
         }
         printf("Binary representation : ");
@@ -177,12 +174,11 @@ void palindrome(int _num)
 
         int test = 1;
         for (int x = 0, n = 32 - 1;x < n;x++, n--) {
-            //any mismatch occurs then it is not pallindrome
+            
             if (a[x] != a[n]) {
                 test = 0;
             }
         }
-        //else its a palindrome
         if (test == 0) {
             printf("is not a palindrome\n");
         }
