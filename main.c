@@ -158,32 +158,37 @@ void replace(int _num)
 
 void palindrome(int _num)
 {
-#define SIZE 32
+    unsigned int n = _num;
 
-    //fill array with zeros
-    int a[SIZE] = { 0 };
+        //fill array with zeros
+        int a[32] = { 0 };
 
-    int i = SIZE - 1;
-    while (_num != 0) {
-        a[i--] = _num & 1;
-        //right shift 
-        _num = _num >> 1;
-    }
-    printf("Binary representation : ");
-
-    for (int x = 0;x < SIZE;x++)
-        printf("%d", a[_num]);
-    printf("\n");
-
-    for (int x = 0, _num = SIZE - 1;x < _num;x++, _num--) {
-        //any mismatch occurs then it is not pallindrome
-        if (a[x] != a[_num]) {
-
-            printf("is not a palindrome\n");
-            main();
+        int i = 32 - 1;
+        while (n != 0) {
+            a[i--] = n & 1;
+            //right shift 
+            n = n >> 1;
         }
+        printf("Binary representation : ");
+
+        for (int x = 0;x < 32;x++)
+            printf("%d", a[x]);
+        printf("\n");
+
+        int test = 1;
+        for (int x = 0, n = 32 - 1;x < n;x++, n--) {
+            //any mismatch occurs then it is not pallindrome
+            if (a[x] != a[n]) {
+                test = 0;
+            }
+        }
+        //else its a palindrome
+        if (test == 0) {
+            printf("is not a palindrome\n");
+        }
+        else {
+            printf("it is a palindrome\n");
+        }
+
+        main();
     }
-    //else its a palindrome
-    printf("it is a palindrome\n");
-    main();
-}
