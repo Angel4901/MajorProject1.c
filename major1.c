@@ -1,3 +1,5 @@
+#include "major1.h"
+
 void main()
 {
     int num;
