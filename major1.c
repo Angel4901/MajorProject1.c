@@ -5,7 +5,7 @@ void main()
     int num;
     int _num;
 
-    printf("Enter the menu option for the operation to perform: ");
+    printf("\nEnter the menu option for the operation to perform: ");
     printf("\n(1) POWER OF 2");
     printf("\n(2) REVERSE BITS");
     printf("\n(3) REPLACE BIT POSITION FROM MASK");
