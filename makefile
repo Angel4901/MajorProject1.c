@@ -52,3 +52,42 @@ default: $(OBJ)
 clean:
 	rm $(OBJ)
 	rm binops
+
+
+//////////////////
+
+IDIR = ../include
+
+CC = gcc
+
+CFLAGS = -I$(IDIR)
+
+ODIR = obj
+
+LDIR = ../lib
+
+LIBS=-lm
+
+_DEPS = major1.h
+
+DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
+
+_OBJ = major1.o power.o reverse.o
+
+replace.o palindrome.o
+
+OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+
+$(ODIR)/%.o: %.c $(DEPS)
+
+$(CC) -c -o $@ $< $(CFLAGS)
+
+major1: $(OBJ)
+
+$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+
+.PHONY: clean
+
+clean:
+
+rm -f $(ODIR)/*.o *~ core $(INCDIR)/*~
