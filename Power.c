@@ -1,9 +1,9 @@
 void power(int _num)
 {
-    int count = 0;
-    int power = 0;
-    int next = 0;
-
+    int count = 0;  //count bits
+    int power = 0; //powers of 2
+    int next = 0;   //store next power 
+                    //for loop to find wether num is power of two
     for (int i = 0; i < 32; i++)
     {
         if (_num & (1 << i))
@@ -12,11 +12,11 @@ void power(int _num)
         }
     }
 
-    if (count == 1)
+    if (count == 1)     //print if num is ower of 2
     {
         printf("\n%d is a power of 2.\n", _num);
     }
-    else
+    else                //else find the next power of two
     {
         printf("\n%d is not a power of 2.\n", _num);
 
@@ -27,32 +27,14 @@ void power(int _num)
                 power = j;
             }
         }
-
+                            //print next power
         next = 1 << (power + 1);
 
         printf("\nNext higher integer that is power of 2 is: %d.\n", next);
     }
+    //go back to main
     main();
 }
 
-void reverse(int _num)
-{
-    unsigned int _num1 = _num;
-        //Declare size
-        unsigned int numOfBits = sizeof(_num) * 8;
-
-        //Initialize revereNum and i
-        unsigned int reverseNum = 0;
-        int i;
-
-        //Reverse num using bitwise
-        for (i = 0; i < numOfBits; i++) {
-            if ((_num1 & (1 << i)))
-                reverseNum |= 1 << ((numOfBits - 1) - i);
-        }
-
-        printf("%u with bits reversed is %u", _num1, reverseNum);
-        main();
-    }
 
 
