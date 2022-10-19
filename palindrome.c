@@ -1,37 +1,33 @@
-#include <stdio.h>
-#define SIZE 32
-int main()
+void palindrome(int _num)
 {
-    unsigned int n;
-    //input a number 
-    printf("Enter a positive integer less than 2 billion: ");
-    scanf("%d",&n);
-   
-   //fill array with zeros
-    int a[SIZE]={0};
-   
-    int i=SIZE-1;
-    while(n!=0){
-        a[i--]=n&1;
-        //right shift 
-        n=n>>1;
-       }
-    printf("Binary representation : ");
-   
-    for(int x=0;x<SIZE;x++)
-    printf("%d",a[x]);
-    printf("\n");
-    
-    for(int x=0,n=SIZE-1;x<n;x++,n--){
-        //any mismatch occurs then it is not pallindrome
-        if(a[x]!=a[n]){
-         
-            printf("is not a palindrome\n");
-            return 0;
-        }
-    }
-    //else its a palindrome
-    printf("it is a palindrome\n");
+    unsigned int no = _num;
 
-    return 0;
-}
+    int array[32] = { 0 };
+        int i = 32 - 1;
+        while (no != 0) {
+            array[i--] = no & 1;
+            no = no >> 1;
+        }
+        printf("Binary representation : ");
+
+        for (int r = 0;r < 32;r++)
+            printf("%d", array[r]);
+        printf("\n");
+
+        int test = 1;
+        for (int r = 0, no = 32 - 1;r < no;r++, no--) {
+            
+            if (array[r] != array[no]) {
+                test = 0;
+            }
+        }
+        if (test == 0) {
+            printf("is not a palindrome\n");
+        }
+        else {
+            printf("it is a palindrome\n");
+        }
+
+        main();
+    }
+
