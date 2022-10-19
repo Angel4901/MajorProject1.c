@@ -41,6 +41,7 @@ void main()
         }
     }
     else if (num == 5)
+        printf("Program terminating. Goodbye.\n");
         exit;
     else
     {
