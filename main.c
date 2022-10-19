@@ -158,24 +158,24 @@ void replace(int _num)
 
 void palindrome(int _num)
 {
-    unsigned int n = _num;
+    unsigned int no = _num;
 
-    int a[32] = { 0 };
+    int array[32] = { 0 };
         int i = 32 - 1;
-        while (n != 0) {
-            a[i--] = n & 1;
-            n = n >> 1;
+        while (no != 0) {
+            array[i--] = no & 1;
+            no = no >> 1;
         }
         printf("Binary representation : ");
 
-        for (int x = 0;x < 32;x++)
-            printf("%d", a[x]);
+        for (int r = 0;r < 32;r++)
+            printf("%d", array[r]);
         printf("\n");
 
         int test = 1;
-        for (int x = 0, n = 32 - 1;x < n;x++, n--) {
+        for (int r = 0, no = 32 - 1;r < no;r++, no--) {
             
-            if (a[x] != a[n]) {
+            if (array[r] != array[no]) {
                 test = 0;
             }
         }
