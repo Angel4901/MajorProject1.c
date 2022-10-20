@@ -1,3 +1,5 @@
+#include "major1.h"
+
 void palindrome(int _num)
 {
     unsigned int no = _num;
