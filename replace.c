@@ -1,16 +1,18 @@
+#include "major1.h"
+
 void replace(int _num)
 {
-    int integerMask;
-    int bitRepPos;
+    int integerMask; //variable to hold the mask
+    int bitRepPos; //variable to hold the bit replacement position
 
-    while (1)
+    while (1) //while true loop that will keep repeating until user enters right parameter
     {
         printf("Enter a positive integer mask less than 3 billion: ");
         scanf("%d", &integerMask);
         if (integerMask > 0 && integerMask < 3000000000)
             break;
     }
-    while (1)
+    while (1) //while true loop that will keep repeating until user enters right parameter
     {
         printf("Enter the bit replacement position from mask (0-indexed): ");
         scanf("%d", &bitRepPos);
@@ -36,6 +38,6 @@ void replace(int _num)
         _num = _num | digit; //use OR to replace
 
     }
-    printf("New integer with bit %d from mask %d is %d\n", bitRepPos, integerMask, _num);
-    main();
+    printf("New integer with bit %d from mask %d is %d\n", bitRepPos, integerMask, _num); //print result
+    main(); //go back to main function
 }
