@@ -1,3 +1,5 @@
+#include "major1.h"
+
 void reverse(int _num)
 {
     unsigned int _num1 = _num;
@@ -14,6 +16,6 @@ void reverse(int _num)
                 reverseNum |= 1 << ((numOfBits - 1) - i);
         }
 
-        printf("%u with bits reversed is %u", _num1, reverseNum);
-        main();
+        printf("%u with bits reversed is %u", _num1, reverseNum); //print final result
+        main(); //go back to main
     }
