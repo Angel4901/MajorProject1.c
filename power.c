@@ -1,3 +1,5 @@
+#include "major1.h"
+
 void power(int _num)
 {
     int count = 0;  //count bits
