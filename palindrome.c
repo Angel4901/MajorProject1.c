@@ -27,13 +27,13 @@ void palindrome(int _num)
                 test = 0;
             }// else its a palindrome
         }
-        if (test == 0) {
+        if (test == 0) { //if its not a palindrome
             printf("is not a palindrome\n");
         }
-        else {
+        else { //if its a palindrome
             printf("it is a palindrome\n");
         }
     
-        main();
+        main(); //return to main
     }
 
