@@ -1,6 +1,6 @@
 #include "major1.h"
 
-void main()
+int main()
 {
     int num;
     int _num;
@@ -40,14 +40,14 @@ void main()
             palindrome(_num);
         }
     }
-    else if (num == 5)
+    else if (num == 5) {
         printf("Program terminating. Goodbye.\n");
-        exit;
+        return(0); }
     else
     {
         printf("Error: Invalid option. Please try again.\n");
-        // printf("\n");
         main();
     }
+return 0;
 }
 
