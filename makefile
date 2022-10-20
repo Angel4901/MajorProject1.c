@@ -1,3 +1,4 @@
+//makefile to use the utlity tool make to run the multiple source code files together
 binops: power.o reverse.o replace.o palindrome.o major1.o
         gcc  power.o reverse.o replace.o palindrome.o major1.o -o binops
 
